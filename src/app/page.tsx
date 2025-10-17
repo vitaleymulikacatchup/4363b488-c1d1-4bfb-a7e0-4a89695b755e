@@ -2,12 +2,12 @@
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay";
-import HeroSplit from "@/components/sections/hero/HeroSplit";
-import SplitAbout from "@/components/sections/about/SplitAbout";
-import ProductCardTwo from "@/components/sections/product/ProductCardTwo";
-import TestimonialCardTwo from "@/components/sections/testimonial/TestimonialCardTwo";
-import ContactCenter from "@/components/sections/contact/ContactCenter";
-import FooterBase from "@/components/sections/footer/FooterBase";
+import HeroSplit from '@/components/sections/hero/HeroSplit';
+import SplitAbout from '@/components/sections/about/SplitAbout';
+import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
+import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCardTwo';
+import ContactCenter from '@/components/sections/contact/ContactCenter';
+import FooterBase from '@/components/sections/footer/FooterBase';
 import { Award, Leaf, Star } from "lucide-react";
 
 const assetMap = [
@@ -28,12 +28,12 @@ export default function Page() {
       <div id="nav" data-section="nav" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <NavbarLayoutFloatingOverlay
-            navItems={[
+            navItems=[
               { name: "Home", id: "home" },
               { name: "About Us", id: "about" },
               { name: "Products", id: "products" },
               { name: "Contact", id: "contact" },
-            ]}
+            ]
             brandName="Bakery Delight"
           />
         </div>
@@ -41,12 +41,12 @@ export default function Page() {
       <div id="hero" data-section="hero" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <HeroSplit
-            title="Wholesome Baked Goods"
+            title="Welcome dudes"
             description="Experience the taste of tradition with our freshly baked artisan bread."
             imageSrc={assetMap.find(a => a.id === "heroImage")?.url ?? "/public/images/placeholder.webp"}
-            buttons={[
+            buttons=[
               { text: "Discover More", href: "products" }
-            ]}
+            ]
           />
         </div>
       </div>
@@ -55,10 +55,10 @@ export default function Page() {
           <SplitAbout
             title="About Bakery Delight"
             description="At Bakery Delight, we are passionate about crafting delicious and wholesome baked goods from scratch."
-            bulletPoints={[
+            bulletPoints=[
               { title: "Artisan Quality", description: "Handcrafted with precision", icon: Award },
               { title: "Fresh Ingredients", description: "Locally sourced and organic", icon: Leaf }
-            ]}
+            ]
             imageSrc={assetMap.find(a => a.id === "featureImage")?.url ?? "/public/images/placeholder.webp"}
           />
         </div>
@@ -68,20 +68,20 @@ export default function Page() {
           <ProductCardTwo
             title="Our Delicacies"
             description="Explore our wide range of irresistible baked goods."
-            products={[
+            products=[
               { id: "1", brand: "Bakery Delight", name: "Sourdough Bread", price: "$5.00", rating: 5, reviewCount: "100", imageSrc: assetMap.find(a => a.id === "productImage1")?.url ?? "/public/images/placeholder.webp" },
               { id: "2", brand: "Bakery Delight", name: "Chocolate Croissant", price: "$3.50", rating: 5, reviewCount: "200", imageSrc: assetMap.find(a => a.id === "productImage2")?.url ?? "/public/images/placeholder.webp" },
               { id: "3", brand: "Bakery Delight", name: "Artisan Pastry", price: "$4.00", rating: 4, reviewCount: "150", imageSrc: assetMap.find(a => a.id === "productImage3")?.url ?? "/public/images/placeholder.webp" }
-            ]}
+            ]
           />
         </div>
       </div>
       <div id="testimonial" data-section="testimonial" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <TestimonialCardTwo
-            testimonials={[
+            testimonials=[
               { id: "1", name: "Sarah Mitchell", role: "Food Critic", testimonial: "The quality of the bread and pastries is outstanding. Highly recommended!", icon: Star }
-            ]}
+            ]
             title="Customer Reviews"
             description="See what our customers have to say"
           />
@@ -102,7 +102,7 @@ export default function Page() {
       <div id="footer" data-section="footer" className="scroll-mt-24">
         <div className="mx-auto px-4 md:px-6">
           <FooterBase
-            columns={[
+            columns=[
               { title: "Explore", items: [
                 { label: "Home", href: "home" },
                 { label: "About Us", href: "about" }
@@ -115,7 +115,7 @@ export default function Page() {
                 { label: "Contact", href: "contact" },
                 { label: "Location", href: "location" }
               ]}
-            ]}
+            ]
             copyrightText="© 2025 Bakery Delight"
           />
         </div>
